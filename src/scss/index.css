@@ -1,0 +1,10 @@
+.body {
+  background-color: red;
+  height: 100vh;
+}
+
+.btn {
+  width: 300px;
+  height: 150px;
+  background-color: green;
+}

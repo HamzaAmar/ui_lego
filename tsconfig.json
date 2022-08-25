@@ -11,11 +11,10 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@type/*": ["./type/*"],
-      "@scss/*": ["./scss/*"]
+      "@components/*": ["./src/components/*"],
+      "@scss/*": ["./src/scss/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "button"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
 }
