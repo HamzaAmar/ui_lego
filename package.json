@@ -19,7 +19,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "cz": "exec < /dev/tty && git cz --hook || true"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
