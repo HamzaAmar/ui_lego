@@ -1,0 +1,243 @@
+// module.exports = {
+//   parser: "@typescript-eslint/parser",
+//   parserOptions: {
+//     ecmaFeatures: {
+//       jsx: true,
+//     },
+//     tsconfigRootDir: __dirname,
+//   },
+//   extends: [
+//     'airbnb',
+//     'plugin:@typescript-eslint/recommended',
+//     'prettier',
+//     'plugin:storybook/recommended',
+//   ],
+//   settings: {
+//     'import/parsers': {
+//       '@typescript-eslint/parser': ['.ts', '.tsx'],
+//     },
+//     'import/resolver': {
+//       typescript: {
+//         project: __dirname,
+//       },
+//       node: {
+//         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+//         moduleDirectory: ['node_modules', 'src/'],
+//       },
+//     },
+//   },
+//   plugins: ['prettier', 'react-hooks', 'testing-library'],
+//   env: {
+//     browser: true,
+//     node: true, // "jest/globals": true,
+//   },
+//   rules: {
+//     // React hooks
+//     'react-hooks/rules-of-hooks': 'error',
+//     'react-hooks/exhaustive-deps': 'error',
+//     // Typescript
+//     'react/jsx-filename-extension': [
+//       'error',
+//       {
+//         extensions: ['.jsx', '.tsx'],
+//       },
+//     ],
+//     // Upgrade from warning to error
+//     '@typescript-eslint/no-unused-vars': 'error',
+//     '@typescript-eslint/explicit-function-return-type': 'error',
+//     '@typescript-eslint/no-explicit-any': 'error',
+//     // We use noop functions in many places, for example as default values for props.
+//     '@typescript-eslint/no-empty-function': 'off',
+//     // Not worth fixing. Just finish converting everything to TS instead.
+//     'react/prop-types': 'off',
+//     // Prop spreading is safe in TS
+//     'react/jsx-props-no-spreading': 'off',
+//     'import/extensions': 'off',
+//     // Disabled to make upgrading easier. TODO(giles): re-enable
+//     'react/function-component-definition': 'off',
+//     'react/jsx-fragments': 'off',
+//     'jsx-a11y/control-has-associated-label': 'off',
+//     'no-use-before-define': 'off',
+//     'arrow-body-style': 'off',
+//     'react/destructuring-assignment': 'off',
+//   },
+//   globals: {
+//     it: true,
+//     expect: true,
+//     describe: true,
+//     jest: true,
+//     document: true,
+//     test: true,
+//     window: true,
+//     fetch: true,
+//     WebSocket: true,
+//     alert: true,
+//     URLSearchParams: true,
+//     defaultProps: true,
+//     childContextTypes: true,
+//     contextTypes: true,
+//     state: true,
+//     Event: true,
+//     fail: true,
+//     afterEach: true,
+//     beforeEach: true,
+//     afterAll: true,
+//     KeyboardEvent: true,
+//     MouseEvent: true,
+//     requestAnimationFrame: true,
+//   },
+//   overrides: [
+//     {
+//       files: ['**/*.ts', '**/*.tsx'],
+//       rules: {
+//         // Import plugin is not really needed for TS files, the TS compiler will throw an
+//         // error for missing imports
+//         'import/named': 'off',
+//         'import/export': 'off',
+//         // PropTypes are not needed for TS files
+//         'react/require-default-props': 'off',
+//       },
+//     },
+//     {
+//       files: ['**/*.js', '**/*.jsx'],
+//       rules: {
+//         // TypeScript rules don't apply in JS files
+//         '@typescript-eslint/no-var-requires': 'off',
+//         '@typescript-eslint/explicit-function-return-type': 'off',
+//       },
+//     },
+//   ],
+// };
+
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "react-hooks", "testing-library"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "it": true,
+    "expect": true,
+    "describe": true,
+    "jest": true,
+    "document": true,
+    "test": true,
+    "window": true,
+    "fetch": true,
+    "WebSocket": true,
+    "alert": true,
+    "URLSearchParams": true,
+    "defaultProps": true,
+    "childContextTypes": true,
+    "contextTypes": true,
+    "state": true,
+    "Event": true,
+    "fail": true,
+    "afterEach": true,
+    "beforeEach": true,
+    "afterAll": true,
+    "KeyboardEvent": true,
+    "MouseEvent": true,
+    "requestAnimationFrame": true
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-restricted-exports": [
+      "error",
+      {
+        "restrictedNamedExports": ["then"]
+      }
+    ],
+    "arrow-body-style": 0,
+    "default-param-last": 0,
+    "import/prefer-default-export": 0,
+    "indent": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": [2, { "ignoreUrls": true, "ignoreRegExpLiterals": true }],
+    "no-console": 0,
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "react",
+            "importNames": ["useLayoutEffect"],
+            "message": "Please import from use-isomorphic-layout-effect instead."
+          }
+        ]
+      }
+    ],
+    "no-useless-concat": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-curly-newline": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/prop-types": 0,
+    "react/sort-comp": 0,
+    "react/state-in-constructor": 0,
+    "react/static-property-placement": 0,
+    "react-hooks/exhaustive-deps": 1,
+    "react-hooks/rules-of-hooks": 2,
+    "semi": [2, "always"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["doc.js", "prop-types.js", "router.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    },
+    {
+      "files": ["*.stories.js", "**/stories/**"],
+      "rules": {
+        "import/no-unresolved": 0,
+        "import/extensions": 0,
+        "import/no-extraneous-dependencies": 0,
+        "react/no-multi-comp": 0,
+        "react/no-unstable-nested-components": 0
+      }
+    },
+    {
+      "files": ["anchor.stories.js"],
+      "rules": {
+        "react/jsx-one-expression-per-line": 0
+      }
+    },
+    {
+      "files": ["**/Accordion/__tests__/**.tsx"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
+}
