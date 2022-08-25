@@ -6,7 +6,12 @@ module.exports = {
     },
     tsconfigRootDir: __dirname,
   },
-  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'airbnb',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -20,14 +25,12 @@ module.exports = {
   plugins: ['prettier', 'react-hooks', 'testing-library'],
   env: {
     browser: true,
-    node: true,
-    // "jest/globals": true,
+    node: true, // "jest/globals": true,
   },
   rules: {
     // React hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-
     // Typescript
     'react/jsx-filename-extension': [
       'error',
@@ -39,18 +42,13 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
-
     // We use noop functions in many places, for example as default values for props.
     '@typescript-eslint/no-empty-function': 'off',
-
     // Not worth fixing. Just finish converting everything to TS instead.
     'react/prop-types': 'off',
-
     // Prop spreading is safe in TS
     'react/jsx-props-no-spreading': 'off',
-
     'import/extensions': 'off',
-
     // Disabled to make upgrading easier. TODO(giles): re-enable
     'react/function-component-definition': 'off',
     'react/jsx-fragments': 'off',
@@ -92,7 +90,6 @@ module.exports = {
         // error for missing imports
         'import/named': 'off',
         'import/export': 'off',
-
         // PropTypes are not needed for TS files
         'react/require-default-props': 'off',
       },

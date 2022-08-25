@@ -15,13 +15,25 @@
     "prettier:base": "prettier --parser typescript --single-quote",
     "prettier:check": "yarn prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
     "prettier:write": "yarn prettier:base -- --write \"src/**/*.{ts,tsx}\"",
-    "validation": "yarn type-check && yarn lint:check && yarn prettier:check"
+    "validation": "yarn type-check && yarn lint:check && yarn prettier:check",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
+    "babel-loader": "^8.2.5",
     "eslint": "8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -30,10 +42,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "^0.6.4",
     "eslint-plugin-testing-library": "^5.6.0",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4"
-  }
+  },
+  "dependencies": {}
 }
