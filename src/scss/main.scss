@@ -1,9 +1,31 @@
 body {
-  background: red;
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  // Layout
+  display: flex;
+  flex: 1;
+  grid-template-columns: 2fr 1fr;
+
+  /* Box */
+  height: 20px;
   min-height: 100vh;
+
+  /* Typography */
+  color: hsl(180deg 14% 23%);
+  color: rgb(33 33 33);
+
+  /* Visual */
+  background-color: hsl(20deg 30% 30%);
 }
+
 .btn {
-  background-color: green;
+  // Box
+  margin: 2rem;
   padding: 1rem 2rem;
-  border: 4px solid red;
+
+  // Visual
+  background-color: hsl(20deg 30% 30%);
 }
