@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "lib": ["DOM", "ESNext"],
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "esnext" /* Specify what module code is generated. */,
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -15,6 +15,6 @@
       "@scss/*": ["./src/scss/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
 }
