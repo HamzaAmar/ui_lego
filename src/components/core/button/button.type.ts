@@ -1,5 +1,5 @@
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-  children: ReactNode;
-}
+    export interface ButtonProps {
+      children: ReactNode;
+    }

@@ -15,6 +15,6 @@
       "@scss/*": ["./src/scss/*"]
     }
   },
-  "include": ["src/**/*", "button"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
 }
