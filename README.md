@@ -4,7 +4,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 
 ## CORE COMPONENT
 
-- [x] Button
+- [x] Button [Button Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/button)
 - [ ] Radio
 - [ ] Checkbox
 - [ ] Toggle
@@ -16,7 +16,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Alert
 - [ ] Input
 - [ ] Select
-- [x] Spinner
+- [x] Spinner [Spinner Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/spinner)
 - [ ] Tooltip
 - [ ] Slider
 
