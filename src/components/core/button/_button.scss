@@ -1,2 +1,208 @@
-.button {
+.btn {
+  // Position
+  position: relative;
+
+  // Layout
+  display: var(--display, inline-flex);
+  gap: min(0.5em, 0.75rem);
+  justify-content: center;
+  align-items: center;
+
+  // Box
+  padding: 0.25em 1em;
+
+  // Typography
+  color: white;
+  white-space: nowrap;
+
+  // Border
+  border: 2px solid transparent;
+  border-radius: var(--shared-radius);
+
+  // Visual
+  background-color: none;
+
+  // Style
+  cursor: pointer;
+
+  // Misc
+  user-select: none;
+}
+
+.btn::before {
+  // Position
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  // Box
+  width: 100%;
+  height: 100%;
+}
+
+.btn:focus-visible,
+.icon-button:focus-visible {
+  outline: 2px dashed var(--shared-color-300);
+  outline-offset: 2px;
+}
+
+.btn:hover,
+.icon-button:hover {
+  // Typography
+  color: white;
+
+  // Visual
+  background-color: var(--shared-color-600);
+}
+
+.btn:disabled {
+  // Typography
+  color: var(--color-background-200);
+
+  // Border
+  border-color: var(--color-background-900);
+
+  // Visual
+  background-color: var(--color-background-900);
+
+  // Shadow
+  box-shadow: none;
+
+  // Visual
+  cursor: not-allowed;
+
+  // Misc
+  pointer-events: none;
+}
+
+/* Button Size Section Style Start */
+
+.btn__xs {
+  font-size: 0.75rem;
+}
+
+.btn__sm {
+  font-size: 0.875rem;
+}
+
+.btn__md {
+  font-size: 1rem;
+}
+
+.btn__lg {
+  font-size: 1.125rem;
+}
+
+.btn__xl {
+  font-size: 1.25rem;
+}
+
+/* Button Size Section Style End */
+
+/* Button Variant Section Style Start */
+
+.btn__contained {
+  // Visual
+  background-color: var(--shared-color-500);
+
+  // Shadow
+  box-shadow: 0 3px 6px -2px var(--shared-color-100);
+}
+
+.btn__outline {
+  // Typography
+  color: var(--shared-color-500);
+
+  // Border
+  border-color: var(--shared-color-500);
+
+  // Shadow
+  box-shadow: 0 3px 6px -2px var(--shared-color-100);
+}
+
+.btn__text {
+  // Typography
+  color: var(--shared-color-700);
+}
+
+/* Button Variant Section Style End */
+
+/* Button isFluid Section Style Start */
+
+.btn__fluid {
+  // Variables
+  --display: flex;
+}
+
+/* Button isFluid Section Style End */
+
+/* Button Variant Section Style Start */
+
+.btn__full {
+  // Variables
+  --radius: 10000px;
+}
+
+.btn__circle {
+  // Variables
+  --radius: 50%;
+}
+
+.btn__small {
+  // Variables
+  --radius: 0.25em;
+}
+
+.btn_sharp {
+  // Variables
+  --radius: 0;
+}
+
+/* Button Variant Section Style End */
+
+.btn--icon-wrapper {
+  // Typography
+  line-height: 0;
+}
+
+.btn--icon-wrapper svg {
+  // Box
+  width: 1em;
+
+  // Visual
+  stroke-width: 2;
+}
+
+.btn__container-loading {
+  // Position
+  position: absolute;
+  inset: 0;
+
+  //  Layout
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+
+  // Box
+  padding: 0.125rem;
+  padding: inherit;
+
+  // Typography
+  font-size: 0.875em;
+
+  // Border
+  border-radius: inherit;
+
+  // Visual
+  background-color: var(--color-background-900);
+}
+
+.icon-button {
+  // Variables
+  --circle-size: 2rem;
+}
+
+.margin-end {
+  // Box
+  margin-inline-start: auto;
 }
