@@ -16,7 +16,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Alert
 - [ ] Input
 - [ ] Select
-- [ ] Spinner
+- [x] Spinner
 - [ ] Tooltip
 - [ ] Slider
 
