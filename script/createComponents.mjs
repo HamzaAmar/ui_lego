@@ -114,7 +114,10 @@ function makeFiles(directory, component, parent) {
         'components',
         `_${parent}`,
       );
-      const componentPath = path.join(fullDirectory, title);
+      const componentPath = path
+        .join(fullDirectory, title)
+        .split(path.sep)
+        .join('/');
 
       if (!fs.existsSync(pathParent)) {
         fs.mkdirSync(pathParent);
