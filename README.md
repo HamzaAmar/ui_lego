@@ -9,7 +9,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Checkbox
 - [ ] Toggle
 - [ ] Avatar
-- [x] Badge
+- [x] Badge [Badge Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/badge)
 - [ ] Chips
 - [ ] Heading
 - [ ] Text

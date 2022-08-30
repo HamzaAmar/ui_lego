@@ -16,14 +16,21 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "node": {
+      // "node": {
+      //   "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      //   "path": {}
+      // }
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@scss", "./src/scss"]
+        ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
   "globals": {
     "JSX": "readonly",
-    "React": true,
     "it": true,
     "expect": true,
     "describe": true,
@@ -50,6 +57,7 @@
   },
   "rules": {
     "react/jsx-uses-react": 0,
+    "no-useless-computed-key": 0,
     "no-undef": 0,
     "react/react-in-jsx-scope": 0,
     "import/extensions": [
