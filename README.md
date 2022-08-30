@@ -9,7 +9,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Checkbox
 - [ ] Toggle
 - [ ] Avatar
-- [ ] Badge
+- [x] Badge
 - [ ] Chips
 - [ ] Heading
 - [ ] Text
