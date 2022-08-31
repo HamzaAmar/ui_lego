@@ -1,0 +1,75 @@
+.text {
+  max-width: 75ch;
+}
+
+/* Text Variant Styles Section Start */
+
+.text__3xs {
+  font-size: 0.5rem;
+}
+
+.text__xxs {
+  font-size: 0.675rem;
+}
+
+.text__xs {
+  font-size: 0.75rem;
+}
+
+.text__sm {
+  letter-spacing: 0.875px;
+}
+
+.text__md {
+  font-size: 1rem;
+}
+
+.text__lg {
+  font-size: 1.25rem;
+}
+
+.text__xl {
+  font-size: 1.5rem;
+}
+
+.text__xxl {
+  font-size: 1.75rem;
+}
+
+.text__3xl {
+  font-size: 2rem;
+}
+
+/* Text Variant Style Section End */
+
+/* Text Color Styles Section Start */
+
+.text__text {
+  color: var(--color-secondary-900);
+}
+
+.text__grey {
+  color: var(--color-secondary-200);
+}
+
+.text__primary {
+  color: var(--color-primary-500);
+}
+
+.text__danger {
+  color: var(--color-danger-500);
+}
+
+.text__warning {
+  color: var(--color-warning-400);
+}
+
+.text__info {
+  color: var(--color-info-500);
+}
+
+.text__success {
+  color: var(--color-success-700);
+}
+
+/* Text Color Style Section End */

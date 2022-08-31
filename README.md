@@ -8,11 +8,10 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Radio
 - [ ] Checkbox
 - [ ] Toggle
-- [ ] Avatar
+- [x] Avatar [Avatar Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/avatar)
 - [x] Badge [Badge Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/badge)
 - [ ] Chips
-- [ ] Heading
-- [ ] Text
+- [ ] Text [Text Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/text)
 - [ ] Alert
 - [ ] Input
 - [ ] Select
@@ -22,7 +21,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 
 ## UI COMPONENT
 
-- [x] FormController
+- [ ] FormController
 - [ ] Table
 - [ ] Breadcrumbs
 - [ ] Card
