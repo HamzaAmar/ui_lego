@@ -1,0 +1,56 @@
+.avatar-wrapper {
+  /*  
+   u_circle utility class is the class that need the custom property --circle-size
+   and from this component I only need to make the size different with the font size section see under 
+   Avatar Size section and catch it with em in --circle-size 
+   */
+  --avatar-size: 2em;
+
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  color: white;
+  border-radius: var(--shared-radius);
+  box-shadow: 0 0.25em 0.25em -0.125em var(--shared-color-200);
+  overflow: hidden;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.avatar,
+.avatar--fallback {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar--fallback {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--shared-color-300),
+    var(--shared-color-500)
+  );
+}
+
+/* Avatar Size Section Style Start */
+.avatar__xs {
+  font-size: 0.75rem;
+}
+
+.avatar__sm {
+  font-size: 1em;
+}
+
+.avatar__md {
+  font-size: 1.5em;
+}
+
+.avatar__lg {
+  font-size: 2.5em;
+}
+
+.avatar__xl {
+  font-size: 4rem;
+}
+
+/* Avatar Size Section Style End */
