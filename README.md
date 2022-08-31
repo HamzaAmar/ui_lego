@@ -11,8 +11,8 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [x] Avatar [Avatar Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/avatar)
 - [x] Badge [Badge Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/badge)
 - [ ] Chips
-- [ ] Heading [Heading Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/heading)
-- [ ] Text [Text Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/text)
+- [x] Heading [Heading Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/heading)
+- [x] Text [Text Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/text)
 - [ ] Alert
 - [ ] Input
 - [ ] Select
