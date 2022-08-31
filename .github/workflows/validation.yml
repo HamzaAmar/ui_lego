@@ -1,0 +1,37 @@
+name: Validate
+
+on: pull-request:
+    push:
+      branches:
+        - master
+
+jobs:
+  test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@main
+        with:
+          node-version: 16.x
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Validation
+        run: yarn lint:check
+
+      - name: Prettier
+      run: yarn lint:check
+
+      - name: StyleLint
+        run: yarn stylelint:check
+
+      - name: Test
+        run: yarn test
