@@ -1,9 +1,10 @@
 name: Validate
 
-on: pull-request:
+on: 
+    pull-request:
     push:
       branches:
-        - master
+        - main
 
 jobs:
   test:
