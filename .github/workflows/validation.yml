@@ -1,17 +1,15 @@
 name: Validate
 
-on: 
-    pull-request:
-    push:
-      branches:
-        - main
+on:
+  pull-request:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
     name: Lint & Test
     runs-on: ubuntu-latest
-    env:
-      CI: true
     steps:
       - name: Checkout Repo
         uses: actions/checkout@main
@@ -29,7 +27,7 @@ jobs:
         run: yarn lint:check
 
       - name: Prettier
-      run: yarn lint:check
+        run: yarn lint:check
 
       - name: StyleLint
         run: yarn stylelint:check
