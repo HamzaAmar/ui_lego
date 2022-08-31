@@ -5,6 +5,12 @@ module.exports = {
   rules: {
     'selector-class-pattern': null,
     'no-descending-specificity': null,
+    'value-no-vendor-prefix': [
+      true,
+      {
+        ignoreValues: ['box'],
+      },
+    ],
     'color-format/format': {
       format: 'hsl',
     },

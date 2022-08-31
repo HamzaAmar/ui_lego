@@ -24,13 +24,4 @@ jobs:
         run: yarn
 
       - name: Validation
-        run: yarn lint:check
-
-      - name: Prettier
-        run: yarn lint:check
-
-      - name: StyleLint
-        run: yarn stylelint:check
-
-      - name: Test
-        run: yarn test
+        run: yarn validation
