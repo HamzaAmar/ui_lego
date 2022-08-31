@@ -1,9 +1,10 @@
 // AUTO GRID LAYOUT STYLE
 
 .l_grid {
+  --minimum: 20ch;
+
   display: grid;
   gap: min(3vw, 2rem);
-  --minimum: 20ch;
 }
 @supports (width: min(var(--minimum), 100%)) {
   .l_grid {

@@ -1,4 +1,4 @@
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+*:where(:not(iframe, canvas, img, svg, video, svg *)) {
   all: unset;
   display: revert;
 }
@@ -18,7 +18,7 @@ body {
   color: var(--color-grey-1000);
   background-color: var(--color-grey-100);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, sans-serif;
   font-weight: 300;
   height: 100%;
 }
@@ -37,6 +37,7 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
   border-radius: 2px;
 }
+
 body::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary-dark);
 }
