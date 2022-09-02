@@ -46,3 +46,16 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 ## ICONS COMPONENT
 
 Because We have A lot Of Icons You can visit /src/components/icons to see all of them or make `yarn storybook` | `npm run storybook` and then visit [Storybook Icons](https://localhost:6006) to see all icons exist in the project
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->

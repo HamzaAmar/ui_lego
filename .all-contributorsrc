@@ -1,0 +1,29 @@
+{
+  "projectName": "ui_lego",
+  "projectOwner": "HamzaAmar",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "HamzaAmar",
+      "name": "Hamza Miloud Amar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41877092?s=400&u=dcb8383b2a557002654208e45bb1ae1893630190&v=4",
+      "profile": "https://www.miloudamar.com/",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test",
+        "a11y"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
+}
