@@ -7,6 +7,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/preset-scss',
     '@storybook/addon-coverage',
+    'storybook-addon-rtl',
   ],
   framework: '@storybook/react',
   core: {
