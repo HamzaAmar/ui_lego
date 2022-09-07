@@ -86,6 +86,8 @@
     "sass": "^1.54.5",
     "sass-loader": "^13.0.2",
     "storybook-addon-rtl": "^0.4.3",
+    "storybook-addon-pseudo-states": "^1.15.1",
+    "storybook-addon-themes": "^6.1.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.11.0",
     "stylelint-color-format": "^1.1.0",

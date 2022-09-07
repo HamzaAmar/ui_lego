@@ -8,6 +8,8 @@ module.exports = {
     '@storybook/preset-scss',
     '@storybook/addon-coverage',
     'storybook-addon-rtl',
+    'storybook-addon-themes',
+    'storybook-addon-pseudo-states',
   ],
   framework: '@storybook/react',
   core: {
