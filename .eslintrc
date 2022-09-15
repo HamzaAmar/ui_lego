@@ -1,7 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier", "react-hooks", "testing-library"],
+  "plugins": ["prettier", "react-hooks", "testing-library", "jest-dom"],
   "env": {
     "node": true,
     "es6": true

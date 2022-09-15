@@ -26,6 +26,7 @@
     "build-storybook": "build-storybook",
     "test-storybook": "test-storybook",
     "test-storybook:coverage": "yarn test-storybook --coverage",
+    "test-storybook:cross-browser": "yarn test-storybook --browsers chromium firefox webkit",
     "test": "jest"
   },
   "devDependencies": {
@@ -45,7 +46,7 @@
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.10",
-    "@storybook/test-runner": "^0.7.0",
+    "@storybook/test-runner": "^0.7.1",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -88,9 +89,10 @@
     "react-dom": "^18.2.0",
     "sass": "^1.54.5",
     "sass-loader": "^13.0.2",
-    "storybook-addon-rtl": "^0.4.3",
     "storybook-addon-pseudo-states": "^1.15.1",
+    "storybook-addon-rtl": "^0.4.3",
     "storybook-addon-themes": "^6.1.0",
+    "storybook-rtl-addon": "^0.3.3",
     "style-loader": "^3.3.1",
     "stylelint": "^14.11.0",
     "stylelint-color-format": "^1.1.0",
