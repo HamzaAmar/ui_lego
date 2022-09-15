@@ -7,6 +7,7 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [x] Button [Button Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/button)
 - [ ] Radio
 - [ ] Checkbox
+- [ ] Switch
 - [ ] Toggle
 - [x] Avatar [Avatar Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/avatar)
 - [x] Badge [Badge Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/badge)
@@ -14,15 +15,26 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [x] Heading [Heading Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/heading)
 - [x] Text [Text Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/text)
 - [ ] Alert
-- [ ] Input
+- [ ] Input Text
+- [ ] Input File
+- [ ] Multi File upload
 - [ ] Select
-- [x] Spinner [Spinner Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/spinner)
 - [ ] Tooltip
 - [ ] Slider
 
-## UI COMPONENT
+## Common COMPONENT
+
+- [ ] Header
+- [ ] Sidebar
+- [ ] Footer
+
+## Composition COMPONENT
 
 - [ ] FormController
+- [ ] Radio Group
+- [ ] CheckBox Group
+- [ ] Toggle Group
+- [ ] Button Group
 - [ ] Table
 - [ ] Breadcrumbs
 - [ ] Card
@@ -32,16 +44,37 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Pagination
 - [ ] Accordion
 - [ ] Banner
-- [ ] Input
-- [ ] Select
-- [ ] Spinner
-- [ ] Tooltip
+- [ ] Carousel
+- [ ] ComboBox
+- [ ] Rating Component
+- [ ] Card
+- [ ] Breadcrumbs
 
-## Common COMPONENT
+## Data Visualization COMPONENT
 
-- [ ] Header
-- [ ] Sidebar
-- [ ] Footer
+- [ ] Axis
+- [ ] Legend
+- [ ] Area Chart
+- [ ] Bar Chart
+- [ ] Donut Chart
+- [ ] Line Chart
+- [ ] Radar Chart
+
+## Pages COMPONENT
+
+- [ ] Register / Login
+- [ ] Checkout
+- [ ] Home
+- [ ] Profile
+- [ ] Dashboard
+- [ ] Chat (index, Messages)
+- [ ] Notification (index, Notification)
+- [ ] E_commerce
+  - [ ] List Product product
+  - [ ] Product Detail
+  - [ ] Order
+  - [ ] Cart
+  - [ ] Checkout
 
 ## ICONS COMPONENT
 
