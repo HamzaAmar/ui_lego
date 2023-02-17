@@ -1,56 +1,138 @@
-.avatar-wrapper {
-  /*  
-   u_circle utility class is the class that need the custom property --circle-size
-   and from this component I only need to make the size different with the font size section see under 
-   Avatar Size section and catch it with em in --circle-size 
-   */
-  --avatar-size: 2em;
-
-  width: var(--avatar-size);
-  height: var(--avatar-size);
-  color: white;
-  border-radius: var(--shared-radius);
-  box-shadow: 0 0.25em 0.25em -0.125em var(--shared-color-200);
-  overflow: hidden;
-}
-
 .avatar {
-  object-fit: cover;
-}
-
-.avatar,
-.avatar--fallback {
-  width: 100%;
-  height: 100%;
-}
-
-.avatar--fallback {
+  position: relative;
   background-image: linear-gradient(
-    to bottom right,
-    var(--shared-color-300),
-    var(--shared-color-500)
+    var(--color-shared-8),
+    var(--color-shared-9)
   );
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  border: 1px solid var(--slate-1);
 }
 
-/* Avatar Size Section Style Start */
+.avatar > * {
+  border-radius: inherit;
+}
+
+// Avatar Size Style Section
+
 .avatar__xs {
-  font-size: 0.75rem;
+  font-size: 24px;
 }
 
 .avatar__sm {
-  font-size: 1em;
+  font-size: 32px;
 }
 
 .avatar__md {
-  font-size: 1.5em;
+  font-size: 3rem;
 }
 
 .avatar__lg {
-  font-size: 2.5em;
-}
-
-.avatar__xl {
   font-size: 4rem;
 }
 
-/* Avatar Size Section Style End */
+.avatar__xl {
+  font-size: 5rem;
+}
+
+.avatar__2xl {
+  font-size: 7rem;
+}
+
+// Avatar Corner Style Section
+
+// Avatar Children Section Style
+
+.avatar--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar--letter {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.35em;
+  user-select: none;
+  border-radius: inherit;
+}
+
+.avatar--plus {
+  font-size: 0.3em;
+  vertical-align: super;
+}
+
+.avatar--icon > svg {
+  width: 0.75em;
+  color: white;
+  stroke-width: 2px;
+}
+
+// Avatar Group Style Section
+.avatar-group {
+  display: flex;
+
+  --flow-gap: 2rem;
+}
+
+.avatar-group__stack {
+  & > * + * {
+    margin-inline-start: -0.5em;
+  }
+}
+
+.avatar-group__grid {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+
+  // width: fit-content;
+}
+
+.avatar-group > * {
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.avatar-group > *:hover {
+  transform: scale(1.1) translateY(-2px);
+  z-index: 1;
+}
+
+// Avatar Badge Section Style Start
+.avatar-badge {
+  position: absolute;
+  z-index: 100;
+  flex: none;
+  font-size: 0;
+}
+
+/* TODO: Make it work with all Variant Of  Badge */
+
+.avatar-badge__start-end {
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  transform: translate(-25%, 25%);
+}
+
+.avatar-badge__start-start {
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  transform: translate(25%, -25%);
+}
+
+.avatar-badge__end-start {
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  transform: translate(-25%, 25%);
+}
+
+.avatar-badge__end-end {
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  transform: translate(25%, 25%);
+}
+
+// Avatar Badge Section Style End
