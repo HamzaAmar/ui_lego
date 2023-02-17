@@ -1,0 +1,101 @@
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  color: var(--slate-2);
+  cursor: pointer;
+}
+
+// Checkbox size variant Section Style Start
+.checkbox__2xs {
+  font-size: 0.75rem;
+}
+
+.checkbox__xs {
+  font-size: 0.875rem;
+}
+
+.checkbox__sm {
+  font-size: 1rem;
+}
+
+.checkbox__md {
+  font-size: 1.125rem;
+}
+
+.checkbox__lg {
+  font-size: 1.25rem;
+}
+
+.checkbox__xl {
+  font-size: 1.5rem;
+}
+
+.checkbox__2xl {
+  font-size: 1.75rem;
+}
+
+// Checkbox size variant Section Style End
+
+.checkbox:hover > .checkbox--indicator {
+  box-shadow: 0 0 0 0.125em var(--color-shared-6);
+}
+
+.checkbox:focus-within {
+  outline: 2px dashed var(--color-shared-10);
+  outline-offset: 0.125em;
+}
+
+.checkbox--element:checked + .checkbox--indicator,
+.checkbox--element:indeterminate + .checkbox--indicator {
+  background-color: var(--color-shared-9);
+  color: white; // Responsible For The Color Of The Check Icon stroke  white in checked state
+}
+
+.checkbox[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.checkbox--element:disabled ~ * {
+  color: var(--slate-10);
+}
+
+.checkbox--element:disabled + .checkbox--indicator {
+  box-shadow: none;
+  border-color: var(--slate-8);
+  background-color: var(--slate-8);
+  color: transparent; // Responsible For The Color Of The Check Icon stroke  transparent in disabled state
+}
+
+.checkbox--element:checked:disabled + .checkbox--indicator {
+  color: var(--slate-9);
+}
+
+.checkbox--indicator {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  border: 1px solid var(--opacity-6);
+  border-radius: 0.25em;
+  color: transparent; // Responsible For The Color Of The Check Icon stroke Default to transparent
+}
+
+.checkbox--label {
+  font-size: 0.875em;
+  color: var(--text-8);
+}
+
+.checkbox--check {
+  stroke: currentcolor;
+}
+
+@media (forced-colors: active) {
+  .checkbox[data-disabled='true'] {
+    color: GrayText;
+  }
+
+  .checkbox[data-disabled='true'] .checkbox--indicator {
+    background-color: GrayText;
+  }
+}
