@@ -1,17 +1,10 @@
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-type Color =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'success'
-  | 'warning'
-  | 'info'
-  | 'purple';
+import type { ReactElement } from 'react';
+import type { Size, Color, Corner } from '../../../types/utils';
 
 interface BadgeBaseProps {
   size?: Size;
   color?: Color;
-  className?: string;
+  corner?: Corner;
 }
 
 interface BadgeNumericProps extends BadgeBaseProps {
@@ -20,8 +13,13 @@ interface BadgeNumericProps extends BadgeBaseProps {
   max?: number;
 }
 
+interface IconBadgeProps extends BadgeBaseProps {
+  variant: 'icon';
+  icon: ReactElement;
+}
+
 interface BadgeDotProps extends BadgeBaseProps {
   variant: 'dot';
 }
 
-export type BadgeProps = BadgeNumericProps | BadgeDotProps;
+export type BadgeProps = BadgeNumericProps | BadgeDotProps | IconBadgeProps;

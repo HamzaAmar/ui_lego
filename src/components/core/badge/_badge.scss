@@ -1,26 +1,24 @@
 @use '../../../scss/settings/ease' as *;
 
 .badge {
-  /* --center-display variable we need in u_center to change the default display:flex property
-   in utility class in /src/scss/utilities/_center.scss */
-  --center-display: inline-flex;
-
-  /*
-  --circle-size variable we need in u_circle from u_circle to change the default of 3rem 
-   in utility class in /src/scss/utilities/_circle.scss */
-  --circe-size: var(--size);
-
   color: white;
   font-weight: bold;
-  border: 0.125em solid var(--color-background-100);
+  border: 0.125em solid var(--color-background-1);
   background-image: linear-gradient(
     to right,
-    var(--shared-color-500),
-    var(--shared-color-400)
+    var(--color-shared-8),
+    var(--color-shared-9)
   );
+  width: var(--size);
+  height: var(--size);
+  line-height: 1;
 }
 
 /* Size Badge Section Style Start */
+.badge__2xs {
+  font-size: 0.375rem;
+}
+
 .badge__xs {
   font-size: 0.5rem;
 }
@@ -37,6 +35,14 @@
   font-size: 0.875rem;
 }
 
+.badge__xl {
+  font-size: 1rem;
+}
+
+.badge__2xl {
+  font-size: 1.25rem;
+}
+
 /* Size Badge Section Style End */
 
 /* Color Badge Section Style Start */
@@ -49,6 +55,14 @@
 
 .badge__numeric {
   --size: 2.375em;
+}
+
+.badge__icon {
+  --size: 2em;
+
+  & svg {
+    width: 1.5em;
+  }
 }
 
 /* Color Badge Section Style End */

@@ -1,13 +1,17 @@
+import { forwardRef } from 'react';
+import { ForwardRefComponent } from '../../../types/polymorphic';
 import { classnames } from '../../../utils/classnames';
 
 import type { BadgeProps } from './badge.type';
 
-const badge = (props: BadgeProps) => {
+const badge = forwardRef((props) => {
   const {
     color = 'primary',
     size = 'md',
     variant = 'numeric',
+    corner = 'full',
     className,
+    ...rest
   } = props;
   let valueToString;
 
@@ -19,14 +23,21 @@ const badge = (props: BadgeProps) => {
   if (props.variant === 'numeric' && props.value) {
     const { value, max } = props;
     valueToString = max && value > max ? `${max}+` : value.toString();
+  } else if (props.variant === 'icon') {
+    valueToString = props.icon;
   }
   const classNames = classnames(
-    `badge badge__${variant} badge__${size} u_center u_circle u_${color}`,
+    `badge badge__${variant} badge__${size} u_center u_${color} l_corner-${corner}`,
     {
       [className!]: Boolean(className),
     },
   );
-  return <div {...classNames}>{valueToString}</div>;
-};
+
+  return (
+    <div className={classNames} {...rest}>
+      {valueToString}
+    </div>
+  );
+}) as ForwardRefComponent<'div', BadgeProps>;
 
 export default badge;
