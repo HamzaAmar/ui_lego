@@ -1,35 +1,26 @@
-import type { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
+import type { ReactElement, CSSProperties } from 'react';
+import type { Color, Corner, Size, Variant } from '../../../types/utils';
 
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-type Color =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'success'
-  | 'warning'
-  | 'info';
-type Variant = 'contained' | 'outline' | 'text' | 'icon' | 'none';
-type Alignment = 'start' | 'end';
-type State = 'idle' | 'loading';
+type VariantUnion = Variant | 'link' | 'text';
 type Position = 'start' | 'end';
-type Radius = 'full' | 'round' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
+type State = 'idle' | 'loading';
 
-export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-  children: ReactNode;
+interface BaseButton {
   size?: Size;
-  variant?: Variant;
   color?: Color;
-  iconAlignment?: Alignment;
-  icon?: ReactElement;
+  corner?: Corner;
   state?: State;
-  classNames?: string;
+  icon?: ReactElement;
+  className?: string;
+  style?: CSSProperties;
+}
+export interface ButtonProps extends BaseButton {
+  variant?: VariantUnion;
   iconPosition?: Position;
-  radius?: Radius;
+  fluid?: boolean;
 }
 
-export interface IconButtonProps extends ComponentPropsWithoutRef<'button'> {
-  classNames?: string;
-  icon: ReactElement;
-  color?: Color;
-  positionEnd?: boolean;
+export interface IconButtonProps extends BaseButton {
+  title: string;
+  variant?: Variant;
 }

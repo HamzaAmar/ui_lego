@@ -1,16 +1,23 @@
 import { forwardRef } from 'react';
 
 import { classnames } from '../../../utils/classnames';
-import Spinner from '../spinner';
+import { Flex, Spinner } from '..';
 
-import { ButtonProps } from './button.type';
+import { ButtonProps, IconButtonProps } from './button.type';
+import { ForwardRefComponent } from '../../../types/polymorphic';
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+/*
+=================================================================================================
+    Button section
+=================================================================================================
+*/
+
+export const Button = forwardRef((props, ref) => {
   const {
     color = 'primary',
     size = 'md',
-    radius = 'sm',
-    variant = 'contained',
+    corner = 'sm',
+    variant = 'solid',
     children,
     state = 'idle',
     icon,
@@ -22,45 +29,86 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const isEndIcon = icon && iconPosition === 'end';
   const isLoading = state === 'loading';
 
-  const leftIcon = isStartIcon ? (
-    <span className="btn--icon-wrapper">{icon}</span>
-  ) : null;
-  const rightIcon = isEndIcon ? (
-    <span className="btn--icon-wrapper">{icon}</span>
-  ) : null;
-
-  const loadingUI = isLoading ? (
-    <div className="btn__container-loading">
-      <Spinner size="sm" />
-      <span>loading...</span>
-    </div>
-  ) : null;
-
   const className = classnames(
-    `btn btn__${size} btn__${variant} u_${color} u_radius__${radius}`,
+    `btn
+     btn__${size}
+     btn__${variant}
+     u_${color}
+     u_corner__${corner}`,
     {
       ['btn__loading']: isLoading,
     },
   );
 
-  const disableIfLoading = isLoading ? { disabled: true } : {};
+  const disabledProps = isLoading ? { disabled: true } : {};
 
   return (
     <button
-      {...className}
+      className={className}
       type="button"
       {...rest}
-      {...disableIfLoading}
+      {...disabledProps}
       ref={ref}
     >
-      {leftIcon}
+      {isStartIcon && <span className="btn--icon-wrapper">{icon}</span>}
       {children}
-      {rightIcon}
-      {loadingUI}
+      {isEndIcon && <span className="btn--icon-wrapper">{icon}</span>}
+      {isLoading && (
+        <Flex
+          items="center"
+          justify="center"
+          gap="xs"
+          className="btn__container-loading"
+        >
+          <Spinner size="sm" />
+          <span>loading...</span>
+        </Flex>
+      )}
     </button>
   );
-});
+}) as ForwardRefComponent<'button', ButtonProps>;
 
 Button.displayName = 'Button';
 
-export default Button;
+/*
+=================================================================================================
+    Icon button section
+=================================================================================================
+*/
+
+export const IconButton = forwardRef(
+  (
+    {
+      icon,
+      title,
+      corner = 'sharp',
+      color = 'primary',
+      size = 'md',
+      variant = 'transparent',
+      className,
+      as: Tag = 'button',
+      ...rest
+    },
+    forwardedRef,
+  ) => {
+    const iconButtonClassName = classnames(
+      `icon-button btn__${size} btn__${variant} l_corner-${corner} u_${color}`,
+      className,
+    );
+
+    return (
+      <Tag
+        aria-label={title}
+        className={iconButtonClassName}
+        ref={forwardedRef}
+        {...rest}
+      >
+        <Flex as="span" items="center" justify="center">
+          {icon}
+        </Flex>
+      </Tag>
+    );
+  },
+) as ForwardRefComponent<'button', IconButtonProps>;
+
+IconButton.displayName = 'Icon Button';

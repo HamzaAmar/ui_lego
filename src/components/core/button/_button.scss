@@ -1,128 +1,129 @@
 .btn {
-  // Position
   position: relative;
-
-  // Layout
   display: var(--display, inline-flex);
   gap: min(0.5em, 0.75rem);
   justify-content: center;
   align-items: center;
-
-  // Box
   padding: 0.25em 1em;
-
-  // Typography
-  color: white;
   white-space: nowrap;
-
-  // Border
   border: 2px solid transparent;
   border-radius: var(--shared-radius);
-
-  // Visual
   background-color: none;
-
-  // Style
   cursor: pointer;
-
-  // Misc
   user-select: none;
+  font-weight: 500;
+  transition: transform 0.15s;
+  font-size: min(var(--size), 20px);
+
+  & svg {
+    width: 1em;
+    stroke-width: 2px;
+  }
+}
+
+.btn--icon-wrapper {
+  line-height: 0;
+}
+
+.u_slate .btn {
+  color: white;
+}
+
+.btn:active {
+  transform: scale(1.03);
 }
 
 .btn::before {
-  // Position
   position: absolute;
   top: 0;
   left: 0;
-
-  // Box
   width: 100%;
   height: 100%;
 }
 
 .btn:focus-visible,
 .icon-button:focus-visible {
-  outline: 2px dashed var(--shared-color-300);
+  outline: 2px dashed var(--color-shared-3);
   outline-offset: 2px;
 }
 
 .btn:hover,
 .icon-button:hover {
-  // Typography
-  color: white;
-
-  // Visual
-  background-color: var(--shared-color-600);
+  background-color: var(--color-shared-5);
 }
 
 .btn:disabled {
-  // Typography
-  color: var(--color-background-200);
-
-  // Border
-  border-color: var(--color-background-900);
-
-  // Visual
-  background-color: var(--color-background-900);
-
-  // Shadow
+  color: var(--slate-10);
+  border-color: var(--slate-7);
+  background-color: var(--slate-7);
   box-shadow: none;
-
-  // Visual
   cursor: not-allowed;
-
-  // Misc
   pointer-events: none;
 }
 
 /* Button Size Section Style Start */
 
+.btn__2xs {
+  --size: 0.675rem;
+}
+
 .btn__xs {
-  font-size: 0.75rem;
+  --size: 0.75rem;
 }
 
 .btn__sm {
-  font-size: 0.875rem;
+  --size: 0.875rem;
 }
 
 .btn__md {
-  font-size: 1rem;
+  --size: 1rem;
 }
 
 .btn__lg {
-  font-size: 1.125rem;
+  --size: 1.125rem;
 }
 
 .btn__xl {
-  font-size: 1.25rem;
+  --size: 1.25rem;
+}
+
+.btn__2xl {
+  --size: 1.5rem;
 }
 
 /* Button Size Section Style End */
 
 /* Button Variant Section Style Start */
 
-.btn__contained {
-  // Visual
-  background-color: var(--shared-color-500);
+.btn__solid {
+  background-color: var(--color-shared-10);
+  box-shadow: 0 3px 6px -2px var(--opacity-6);
+}
 
-  // Shadow
-  box-shadow: 0 3px 6px -2px var(--shared-color-100);
+.btn__solid:hover {
+  background-color: var(--color-shared-11);
 }
 
 .btn__outline {
-  // Typography
-  color: var(--shared-color-500);
+  color: var(--color-shared-11);
+  border-color: var(--color-shared-11);
+  box-shadow: 0 3px 6px -2px var(--color-shared-1);
+}
 
-  // Border
-  border-color: var(--shared-color-500);
+.btn__soft {
+  color: var(--color-shared-12);
+  background-color: var(--color-shared-5);
+  border-color: var(--color-shared-7);
+  box-shadow: 0 3px 6px -2px var(--color-shared-1);
+}
 
-  // Shadow
-  box-shadow: 0 3px 6px -2px var(--shared-color-100);
+.btn__soft:hover {
+  background-color: var(--color-shared-6);
+  color: currentcolor;
 }
 
 .btn__text {
-  // Typography
-  color: var(--shared-color-700);
+  color: var(--color-shared-7);
 }
 
 /* Button Variant Section Style End */
@@ -139,70 +140,43 @@
 /* Button Variant Section Style Start */
 
 .btn__full {
-  // Variables
   --radius: 10000px;
 }
 
 .btn__circle {
-  // Variables
   --radius: 50%;
 }
 
 .btn__small {
-  // Variables
   --radius: 0.25em;
 }
 
 .btn_sharp {
-  // Variables
   --radius: 0;
+}
+
+.btn__container-loading {
+  position: absolute;
+  inset: 0;
+  font-size: 0.875em;
+  background-color: var(--slate-7);
 }
 
 /* Button Variant Section Style End */
 
-.btn--icon-wrapper {
-  // Typography
-  line-height: 0;
-}
-
-.btn--icon-wrapper svg {
-  // Box
-  width: 1em;
-
-  // Visual
-  stroke-width: 2;
-}
-
-.btn__container-loading {
-  // Position
-  position: absolute;
-  inset: 0;
-
-  //  Layout
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-
-  // Box
-  padding: 0.125rem;
-  padding: inherit;
-
-  // Typography
-  font-size: 0.875em;
-
-  // Border
-  border-radius: inherit;
-
-  // Visual
-  background-color: var(--color-background-900);
-}
-
 .icon-button {
-  // Variables
-  --circle-size: 2rem;
+  box-sizing: content-box;
+
+  // background: transparent;
+  border: 1px solid var(--opacity-6);
+  min-width: none;
+  width: calc(var(--size) * 1.25);
+  height: calc(var(--size) * 1.25);
+  padding: 0.25rem;
+  flex-shrink: 0;
 }
 
-.margin-end {
-  // Box
-  margin-inline-start: auto;
+.icon-button svg {
+  width: 1.125em;
+  stroke-width: 1px;
 }
