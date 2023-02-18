@@ -20,8 +20,7 @@ function classnames(...args: any) {
       }
     }
   });
-  const className = newString.trimEnd();
-  return className ? { className } : {};
+  return newString.trimEnd();
 }
 
 export default classnames;
