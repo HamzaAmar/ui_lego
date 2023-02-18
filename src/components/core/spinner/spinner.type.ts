@@ -1,13 +1,7 @@
-type Color =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'warning'
-  | 'success'
-  | 'info';
-type Size = 'sm' | 'md' | 'lg';
+import { Color, Size } from '../../../types/utils';
 
 export interface SpinnerProps {
   color?: Color;
   size?: Size;
+  thickness?: string;
 }

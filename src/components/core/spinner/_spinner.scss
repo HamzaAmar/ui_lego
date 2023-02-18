@@ -1,62 +1,59 @@
 .spinner {
-  // Position
   position: relative;
-
-  // layout
   flex: none;
-
-  // Box
-  width: var(--loader-size, 1.5rem);
-  height: var(--loader-size, 1.5rem);
+  width: 1em;
+  height: 1em;
+  box-sizing: content-box;
 }
 
 .spinner::before,
 .spinner::after {
-  // Position
   position: absolute;
   top: 0;
   left: 0;
   content: '';
-
-  // Box
   width: 100%;
   height: 100%;
-
-  // typography
-  color: var(--shared-color-500);
-
-  // Border
-  border: 2px solid transparent;
+  color: var(--color-shared-10);
+  border: min(var(--border), 0.5em) solid transparent;
   border-top-color: currentcolor;
   border-left-color: currentcolor;
   border-radius: 50%;
-
-  // Misc
   transform: rotate(-45deg);
-
-  // animation
-  animation: spinner-move 1s infinite ease;
+  animation: spinner-move 0.85s infinite linear;
 }
 
 .spinner::after {
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 
 // Spinner Size Style Section Start
+.spinner__2xs {
+  font-size: 0.675em;
+}
+
+.spinner__xs {
+  font-size: 0.75em;
+}
 
 .spinner__sm {
-  // variables
-  --loader-size: 1em;
+  font-size: 0.875em;
 }
 
 .spinner__md {
-  // variables
-  --loader-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .spinner__lg {
-  // variables
-  --loader-size: 2em;
+  font-size: 1.75em;
+}
+
+.spinner__xl {
+  font-size: 2.5em;
+}
+
+.spinner__2xl {
+  font-size: 4em;
 }
 
 // Spinner Size Style Section End
