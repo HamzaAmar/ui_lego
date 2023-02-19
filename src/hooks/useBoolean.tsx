@@ -4,7 +4,7 @@ const useBoolean = (initialVal: boolean = false) => {
   const [state, setState] = useState(initialVal);
 
   const handleToggle = () => {
-    setState((state) => !state);
+    setState((bool) => !bool);
   };
   const handleTrue = () => {
     setState(true);
