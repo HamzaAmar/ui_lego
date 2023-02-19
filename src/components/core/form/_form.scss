@@ -1,0 +1,250 @@
+/*
+=================================================================================================
+ Form Field Wrapper  Style Section 
+=================================================================================================
+*/
+
+.form-field-wrapper {
+  border: 1px solid transparent;
+  color: var(--text-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-field-wrapper__fluid {
+  flex: 1;
+  width: 100%;
+  display: block;
+}
+
+// ----- 1.1) Focus Style
+.form-field-wrapper:focus-within {
+  outline: 2px solid var(--primary-8);
+  outline-offset: -1px;
+}
+
+// ----- 1.2) Hover Style
+
+// ----- 1.3) Invalidate Style
+
+.text-field--root[data-invalid='true'] {
+  color: var(--red-11);
+
+  & .form-field-wrapper {
+    border-color: var(--red-9);
+    outline-color: var(--red-9);
+    background-color: var(--red-5);
+  }
+}
+
+// ----- 1.4) Disabled Style
+.text-field--root[data-disabled='true'] {
+  color: var(--slate-11);
+
+  & .form-field-wrapper {
+    background-color: var(--slate-5);
+    cursor: not-allowed;
+
+    &:hover[data-disabled='false'] {
+      border-color: var(--primary-8);
+    }
+  }
+}
+
+.text-field--root[data-readonly='true'] .form-field-wrapper {
+  background-color: var(--slate-5);
+}
+
+// --------------4) variant style Section
+.form-field-wrapper__outline {
+  border-color: var(--slate-7);
+}
+
+.form-field-wrapper__filled {
+  border-color: var(--slate-6);
+  background-color: var(--slate-3);
+}
+
+/*
+=================================================================================================
+ Form Field Style Section 
+=================================================================================================
+*/
+.form-field {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  cursor: inherit;
+  padding-inline: 0.5em;
+}
+
+.form-field[type='color'] {
+  padding: 0;
+  height: 2rem;
+}
+
+/*
+=================================================================================================
+ Input Style Section 
+=================================================================================================
+*/
+.input__xs {
+  padding-block: 0175rem;
+}
+
+.input__sm {
+  padding-block: 0.275rem;
+}
+
+.input__md {
+  padding-block: 0.35rem;
+}
+
+.input__lg {
+  padding-block: 0.5rem;
+}
+
+.input__xl {
+  padding-block: 0.625rem;
+}
+
+.form-field:disabled {
+  pointer-events: none;
+  background-color: var(--slate-7);
+}
+
+.input-field--prefix,
+.input-field--suffix {
+  font-size: 0.75rem;
+  min-width: 2rem;
+  padding: 0.5em;
+}
+
+/*
+=================================================================================================
+ Textarea Style Section 
+=================================================================================================
+*/
+.textarea__sm {
+  min-height: 4em;
+}
+
+.textarea__md {
+  min-height: 6em;
+}
+
+.textarea__lg {
+  min-height: 8em;
+}
+
+/*
+=================================================================================================
+ Input Number Style Section 
+=================================================================================================
+*/
+
+.input-number--counter-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.number-input--button {
+  line-height: 0;
+  background-color: var(--slate-7);
+  height: 50%;
+}
+
+.number-input--button:hover {
+  background-color: var(--slate-8);
+}
+
+.number-input--button:active {
+  background-color: var(--opacity-8);
+}
+
+/*
+=================================================================================================
+ Input Password Style Section 
+=================================================================================================
+*/
+
+.password-input--button {
+  line-height: 0;
+}
+
+.password-input--button:hover {
+  background-color: var(--slate-5);
+}
+
+/*
+=================================================================================================
+ Form Group Style Section 
+=================================================================================================
+*/
+.form-group--container {
+  color: var(--slate-11);
+  border: none;
+}
+
+.form-group--border {
+  border: 1px solid var(--opacity-6);
+}
+
+.form-group--legend {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  margin-inline-start: 0.5rem;
+}
+
+.form-group {
+  padding: 0.5rem;
+}
+
+.form-group--fluid > * {
+  flex-grow: 1;
+}
+
+/*
+=================================================================================================
+ Form Controller Style Section 
+=================================================================================================
+*/
+.form-controller--required {
+  color: var(--red-11);
+  margin-inline-start: 0.25em;
+  line-height: 0;
+  font-weight: bold;
+  font-size: 0.875rem;
+  vertical-align: center;
+}
+
+.form-field__search:focus + .search-field--icon {
+  display: none;
+}
+
+.select-field {
+  background-color: var(--slate-1);
+}
+
+.select-chevron {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--slate-11);
+}
+
+.input-file {
+  background-color: var(--slate-7);
+  padding: 0.25rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.input-file:hover {
+  background-color: var(--slate-8);
+}
