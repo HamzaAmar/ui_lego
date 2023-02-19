@@ -1,0 +1,52 @@
+.breadcrumb--item svg {
+  width: 1em;
+}
+
+.breadcrumb--item {
+  cursor: pointer;
+}
+
+// .breadcrumb--item {
+// }
+.breadcrumb--item__2xs {
+  font-size: 0.675rem;
+}
+
+.breadcrumb--item__xs {
+  font-size: 0.75rem;
+}
+
+.breadcrumb--item__sm {
+  font-size: 0.825rem;
+}
+
+.breadcrumb--item__md {
+  font-size: 1rem;
+}
+
+.breadcrumb--item__lg {
+  font-size: 1.125rem;
+}
+
+.breadcrumb--item__xl {
+  font-size: 1.325rem;
+}
+
+.breadcrumb--item__2xl {
+  font-size: 1.5rem;
+}
+
+.breadcrumb--link {
+  color: var(--indigo-11);
+  font-size: 1em;
+}
+
+.breadcrumb--link:hover {
+  text-decoration: underline;
+  color: var(--indigo-11);
+}
+
+.breadcrumb--link[aria-current='page'] {
+  color: var(--slate-11);
+  text-decoration: none;
+}
