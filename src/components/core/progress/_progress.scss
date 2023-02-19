@@ -1,0 +1,86 @@
+/*
+====================================================================================================
+    Progress Bar Section
+====================================================================================================
+*/
+
+.progress-bar {
+  width: 100%;
+  border-radius: 100px;
+  background-color: var(--opacity-6);
+  position: relative;
+  height: var(--size);
+}
+
+.progress__2xs {
+  --size: 0.1rem;
+}
+
+.progress__xs {
+  --size: 0.175rem;
+}
+
+.progress__sm {
+  --size: 0.25rem;
+}
+
+.progress__md {
+  --size: 0.35rem;
+}
+
+.progress__lg {
+  --size: 0.5rem;
+}
+
+.progress__xl {
+  --size: 0.675rem;
+}
+
+.progress__2xl {
+  --size: 0.875rem;
+}
+
+.circle-chart--progress {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+  stroke: var(--color-shared-9);
+}
+
+.circle-chart--text {
+  font-size: 0.4rem;
+  text-anchor: middle;
+  font-weight: 400;
+}
+
+.progress-bar--inner {
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--color-shared-9),
+    var(--color-shared-8)
+  );
+  border-radius: inherit;
+}
+
+/*
+====================================================================================================
+    Progress Circle Section
+====================================================================================================
+*/
+
+.progress-circle {
+  width: calc(var(--size) * 10);
+  color: white;
+}
+
+.circle-chart--stroke {
+  fill: none;
+  stroke-width: 1.2;
+  stroke: var(--slate-8);
+}
