@@ -1,27 +1,27 @@
-.u_radius__none {
-  --shared-radius: var(--radius-none);
+.u_corner__none {
+  border-radius: var(--radius-none);
 }
 
-.u_radius__sm {
-  --shared-radius: var(--radius-sm);
+.u_corner__sm {
+  border-radius: var(--radius-sm);
 }
 
-.u_radius__md {
-  --shared-radius: var(--radius-md);
+.u_corner__md {
+  border-radius: var(--radius-md);
 }
 
-.u_radius__lg {
-  --shared-radius: var(--radius-lg);
+.u_corner__lg {
+  border-radius: var(--radius-lg);
 }
 
-.u_radius__xl {
-  --shared-radius: var(--radius-xl);
+.u_corner__xl {
+  border-radius: var(--radius-xl);
 }
 
-.u_radius__round {
-  --shared-radius: var(--radius-round);
+.u_corner__round {
+  border-radius: var(--radius-round);
 }
 
-.u_radius__full {
-  --shared-radius: var(--radius-full);
+.u_corner__full {
+  border-radius: var(--radius-full);
 }

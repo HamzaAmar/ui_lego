@@ -1,9 +1,76 @@
-.u_weight__bold {
-  font-weight: bold;
+// FONT SIZE STYLE SECTION START
+.u_size-3xs {
+  font-size: var(--font-3xs);
 }
 
-.u_weight__normal {
-  font-weight: normal;
+.u_size-2xs {
+  font-size: var(--font-2xs);
+}
+
+.u_size-xs {
+  font-size: var(--font-xs);
+}
+
+.u_size-sm {
+  font-size: var(--font-sm);
+}
+
+.u_size-md {
+  font-size: var(--font-md);
+}
+
+.u_size-lg {
+  font-size: var(--font-lg);
+}
+
+.u_size-xl {
+  font-size: var(--font-xl);
+}
+
+.u_size-2xl {
+  font-size: var(--font-2xl);
+}
+
+.u_size-3xl {
+  font-size: var(--font-3xl);
+}
+
+// FONT SIZE STYLE SECTION END
+
+.u_font-thin {
+  font-weight: 100;
+}
+
+.u_font-extra-light {
+  font-weight: 200;
+}
+
+.u_font-light {
+  font-weight: 300;
+}
+
+.u_font-normal {
+  font-weight: 400;
+}
+
+.u_font-medium {
+  font-weight: 500;
+}
+
+.u_font-semi-bold {
+  font-weight: 600;
+}
+
+.u_font-bold {
+  font-weight: 700;
+}
+
+.u_font-extra-bold {
+  font-weight: 800;
+}
+
+.u_font-black {
+  font-weight: 900;
 }
 
 .u_style__italic {
