@@ -7,6 +7,7 @@ const safari = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth={1}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path d="m8 16 2-6 6-2-2 6-6 2Z" />

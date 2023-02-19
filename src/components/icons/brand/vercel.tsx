@@ -7,6 +7,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth={1}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path d="M3 19h18L12 4 3 19Z" />

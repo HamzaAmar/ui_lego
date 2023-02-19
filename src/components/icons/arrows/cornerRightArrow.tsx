@@ -18,6 +18,7 @@ const cornerRightArrow = ({
     transform={`${ROTATION[direction]} scale(${reverse ? '-1' : '1'})`}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...rest}
   >
     <path d="M6 6h6a3 3 0 0 1 3 3v10m0 0-4-4m4 4 4-4" />

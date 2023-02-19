@@ -13,6 +13,7 @@ const arrow = ({ direction = 'bottom', ...rest }: ArrowProps) => (
     transform={`rotate(${ROTATION[direction]})`}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...rest}
   >
     <path d="M12 5v14m0 0 4-4m-4 4-4-4" />

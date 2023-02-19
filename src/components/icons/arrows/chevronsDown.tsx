@@ -13,6 +13,7 @@ const chevronsDown = ({ direction = 'bottom', ...rest }: ChevronProps) => (
     transform={`rotate(${ROTATION[direction]})`}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...rest}
   >
     <path d="m7 7 5 5 5-5M7 13l5 5 5-5" />

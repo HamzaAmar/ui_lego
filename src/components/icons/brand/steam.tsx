@@ -7,6 +7,7 @@ const steam = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth={1}
     strokeLinecap="round"
     strokeLinejoin="round"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path d="M16.5 5a4.5 4.5 0 1 1-.7 9l-4.3 3v0a3 3 0 0 1-2.8 3h-.2a3 3 0 0 1-3-2.4L3 16.5V13l3.5 1.8a3 3 0 0 1 2.8-.7l2.8-3.8A4.5 4.5 0 0 1 16.5 5Z" />
