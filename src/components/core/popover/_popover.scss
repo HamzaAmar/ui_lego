@@ -1,0 +1,44 @@
+.popup--content {
+  border-radius: 4px;
+  padding: 8px;
+  width: 260px;
+  background-color: var(--slate-1);
+  border: 1px solid var(--opacity-6);
+  opacity: 0;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+
+  &[data-state='open'],
+  &[data-state='delayed-open'] {
+    opacity: 1;
+    transform: none;
+  }
+
+  &[data-side='top'] {
+    transform: translateY(2px);
+  }
+
+  &[data-side='right'] {
+    transform: translateX(-2px);
+  }
+
+  &[data-side='bottom'] {
+    transform: translateY(-2px);
+  }
+
+  &[data-side='left'] {
+    transform: translateX(2px);
+  }
+}
+
+.popup--close {
+  position: absolute;
+  right: 0.5rem;
+}
+
+.popup--arrow {
+  fill: var(--slate-1);
+  stroke: var(--opacity-6);
+  stroke-width: 2px;
+}
