@@ -57,6 +57,7 @@
   },
   "rules": {
     "react/jsx-uses-react": 0,
+    "no-underscore-dangle": 0,
     "no-useless-computed-key": 0,
     "no-undef": 0,
     "react/react-in-jsx-scope": 0,
@@ -95,6 +96,7 @@
         ]
       }
     ],
+    "no-shadow": 0,
     "no-useless-concat": 0,
     "react/function-component-definition": 0,
     "react/jsx-curly-newline": 0,

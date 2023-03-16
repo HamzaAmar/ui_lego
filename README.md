@@ -4,51 +4,49 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 
 ## CORE COMPONENT
 
-- [x] Button [Button Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/button)
-- [ ] Radio
-- [ ] Checkbox
-- [ ] Switch
-- [ ] Toggle
+- [x] Alert [Alert Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/alert)
 - [x] Avatar [Avatar Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/avatar)
 - [x] Badge [Badge Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/badge)
-- [ ] Chips
-- [x] Heading [Heading Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/heading)
-- [x] Text [Text Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/text)
-- [ ] Alert
-- [ ] Input Text
-- [ ] Input File
-- [ ] Multi File upload
-- [ ] Select
-- [ ] Tooltip
-- [ ] Slider
-
-## Common COMPONENT
-
-- [ ] Header
-- [ ] Sidebar
-- [ ] Footer
+- [x] Button [Button Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/button)
+- [x] Checkbox [Checkbox Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/checkbox)
+- [x] Radio [Radio Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/radio)
+- [x] Radio Group [Radio Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/radio)
+- [x] Switch
+- [x] Chips [Chips Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/chips)
+- [x] Typography [Typography Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/typography)
+- [x] Input Text [InputText Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/form)
+- [x] Input Password [InputPassword Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/form)
+- [x] Input Number [InputNumber Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/form)
+- [x] Textarea [Textarea Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/form)
+- [x] Input File
+- [x] Select
+- [ ] Multi File upload(Dropzone)
+- [x] Tooltip
+- [x] Slider
+- [x] Toggle
+- [x] Spinner [Spinner Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/spinner)
+- [x] Grid [Grid Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/layout)
+- [x] Flex [Flex Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/core/layout)
 
 ## Composition COMPONENT
 
 - [ ] FormController
-- [ ] Radio Group
+
 - [ ] CheckBox Group
 - [ ] Toggle Group
 - [ ] Button Group
-- [ ] Table
-- [ ] Breadcrumbs
+- [x] Table Table [Table Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/composition/table)
+- [x] Breadcrumbs [Breadcrumbs Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/composition/breadcrumb)
 - [ ] Card
 - [ ] Dialog
 - [ ] Tabs
 - [ ] Timeline
-- [ ] Pagination
+- [x] Pagination Pagination [Pagination Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/composition/pagination)
 - [ ] Accordion
 - [ ] Banner
 - [ ] Carousel
 - [ ] ComboBox
-- [ ] Rating Component
-- [ ] Card
-- [ ] Breadcrumbs
+- [x] Rating [Rating Code](https://github.com/HamzaAmar/ui_lego/tree/main/src/components/composition/rating)
 
 ## Data Visualization COMPONENT
 
@@ -59,22 +57,6 @@ It's a UI starter from make next Website creation faster, I make in it all the n
 - [ ] Donut Chart
 - [ ] Line Chart
 - [ ] Radar Chart
-
-## Pages COMPONENT
-
-- [ ] Register / Login
-- [ ] Checkout
-- [ ] Home
-- [ ] Profile
-- [ ] Dashboard
-- [ ] Chat (index, Messages)
-- [ ] Notification (index, Notification)
-- [ ] E_commerce
-  - [ ] List Product product
-  - [ ] Product Detail
-  - [ ] Order
-  - [ ] Cart
-  - [ ] Checkout
 
 ## ICONS COMPONENT
 
