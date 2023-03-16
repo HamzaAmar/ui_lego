@@ -49,7 +49,7 @@ const Checkbox = forwardRef((props, forwardedRef) => {
     >
       <input
         type="checkbox"
-        className="u_sr-only checkbox--element"
+        className="u_visually-hidden checkbox--element"
         name={name}
         aria-checked={isIndeterminate && 'mixed'}
         id={id}
@@ -58,7 +58,9 @@ const Checkbox = forwardRef((props, forwardedRef) => {
       />
       <span className="checkbox--indicator">{checkboxIcon}</span>
       <div
-        className={classnames('checkbox--label', { 'u_sr-only': showLabel })}
+        className={classnames('checkbox--label', {
+          'u_visually-hidden': showLabel,
+        })}
       >
         {label}
       </div>
