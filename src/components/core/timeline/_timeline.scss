@@ -1,0 +1,108 @@
+.timeline {
+  position: relative;
+}
+
+.timeline--line {
+  border-left: var(--color-shared-9) 0.15em var(--timeline-variant);
+  width: 0.15em;
+  position: absolute;
+  left: -4px;
+  top: 0.25rem;
+  height: 100%;
+}
+
+.timeline--content {
+  padding-inline-start: 1rem;
+}
+
+.timeline--item {
+  position: relative;
+  padding: 0.25rem;
+}
+
+.timeline--bullet {
+  width: 1em;
+  height: 1em;
+  background-color: var(--slate-1);
+  border-radius: var(--radius, 50%);
+  border: var(--color-shared-9) 0.15em solid;
+  transform: translateX(-50%) translateX(-2px);
+  overflow: hidden;
+  box-shadow: 0 0 0 0.3em var(--slate-1);
+}
+
+// .timeline--item::before {
+//   content: "";
+//   position: absolute;
+//   background-color: var(--slate-1);
+//   border: 2px solid var(--color-shared-9);
+//   left: -0.25rem;
+//   top: 25%;
+//   width: var(--bullet-size);
+//   height: var(--bullet-size);
+// }
+
+/* 
+====================================================================================================
+Corner Section Style Start
+====================================================================================================
+*/
+
+.timeline--item__sharp {
+  --radius: 0;
+}
+
+.timeline--item__radius {
+  --radius: 0.25rem;
+}
+
+/* 
+====================================================================================================
+Size Section Style Start
+====================================================================================================
+*/
+.timeline--line__2xs {
+  font-size: 0.5rem;
+}
+
+.timeline--line__xs {
+  font-size: 0.75rem;
+}
+
+.timeline--line__sm {
+  font-size: 1rem;
+}
+
+.timeline--line__md {
+  font-size: 1.25rem;
+}
+
+.timeline--line__lg {
+  font-size: 1.5rem;
+}
+
+.timeline--line__xl {
+  font-size: 1.75rem;
+}
+
+.timeline--line__2xl {
+  font-size: 2rem;
+}
+
+/* 
+====================================================================================================
+Variant Section Style Start
+====================================================================================================
+*/
+
+.timeline--item__solid {
+  --timeline-variant: solid;
+}
+
+.timeline--item__dotted {
+  --timeline-variant: dotted;
+}
+
+.timeline--item__dashed {
+  --timeline-variant: dashed;
+}
