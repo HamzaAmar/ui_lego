@@ -44,7 +44,9 @@ const rating = ({
       </svg>
 
       <figcaption
-        className={classnames('u_font-medium', { 'u_sr-only': !showLabel })}
+        className={classnames('u_font-medium', {
+          'u_visually-hidden': !showLabel,
+        })}
       >
         {rating} star{rating > 1 && 's'} out of 5
       </figcaption>
