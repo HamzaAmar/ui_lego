@@ -1,4 +1,4 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef } from 'react';
 import { ForwardRefComponent } from '../../../types/polymorphic';
 import { classnames } from '../../../utils/classnames';
 import {
@@ -21,7 +21,6 @@ const icons: IconsStatus = {
 };
 
 const Alert = forwardRef((props, forwardedRef) => {
-  const fallbackID = useId();
   const {
     type = 'danger',
     showIcon,
@@ -30,34 +29,29 @@ const Alert = forwardRef((props, forwardedRef) => {
     inline,
     variant = 'solid',
     corner = 'md',
-    id = fallbackID,
     className,
     ...rest
   } = props;
   const { state, handleTrue } = useBoolean(false);
 
-  const inlineText = !inline
-    ? ({ direction: 'column' } as { direction: 'column' })
-    : {};
-
   if (state) {
     return null;
   }
-  const alertClassName = classnames(
+  const _className = classnames(
     `alert alert__${variant} u_${type} l_corner-${corner}`,
     { className },
   );
+
+  const inlineText = !inline ? { direction: 'column' as const } : {};
+
   return (
     <Flex
+      ref={forwardedRef}
       gap="2xs"
       justify="between"
       items="start"
-      className={alertClassName}
-      id={id}
+      className={_className}
       role="alert"
-      aria-labelledby={`title_${id}`}
-      aria-describedby={`description_${id}`}
-      ref={forwardedRef}
       {...rest}
     >
       <Flex items="start" gap="sm">
@@ -66,26 +60,25 @@ const Alert = forwardRef((props, forwardedRef) => {
         )}
         <Flex {...inlineText} justify="center">
           {Boolean(title) && (
-            <Text
-              id={`title_${id}`}
-              transform="capitalize"
-              leading="md"
-              size="sm"
-              weight="medium"
-            >
+            <Text transform="capitalize" leading="md" size="sm" weight="medium">
               {title}
             </Text>
           )}
-          <Text id={`description_${id}`} as="span" size="xs">
-            {message}
-          </Text>
+          {message && (
+            <Text as="span" size="xs">
+              {message}
+            </Text>
+          )}
         </Flex>
       </Flex>
       <IconButton
         size="xs"
+        corner="full"
         onClick={handleTrue}
         icon={<Close />}
         title="close title"
+        variant="soft"
+        color="slate"
       />
     </Flex>
   );
