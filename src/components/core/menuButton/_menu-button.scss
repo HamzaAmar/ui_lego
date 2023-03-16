@@ -1,0 +1,58 @@
+.menu-button--container {
+  max-width: 380px;
+  width: 98vw;
+  min-width: 260px;
+  box-shadow: 0 4px 5px -2px rgba(0 0 0 / 10%);
+  max-height: 500px;
+  background-color: var(--slate-1);
+  border-top: var(--color-primary-5) 2px solid;
+  border-radius: 0.25rem;
+  overflow: auto;
+  z-index: 11000;
+  position: relative;
+}
+
+.menu-button--sticky {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.language--item {
+  padding: 0.25rem 0;
+}
+
+.menu-button--header {
+  padding: 0 0.5rem;
+}
+
+.menu-button--item {
+  outline: transparent 2px solid;
+  padding: 0.5rem 1rem;
+}
+
+.menu-button--item:focus-visible {
+  background-color: var(--slate-1);
+  outline: 1px solid transparent;
+}
+
+.menu-button--item:hover {
+  background-color: var(--slate-5);
+}
+
+.menu-button--separator {
+  border-bottom: 1px solid var(--opacity-6);
+}
+
+.menu-button--main {
+  overflow: auto;
+  padding: 0;
+}
+
+.menu-button--header,
+.menu-button--footer {
+  padding: 0.5rem 0;
+}
+
+.menu-button--content {
+  padding: 0;
+}
