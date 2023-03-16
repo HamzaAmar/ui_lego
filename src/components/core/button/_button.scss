@@ -25,7 +25,7 @@
   line-height: 0;
 }
 
-.u_slate .btn {
+.u_slate.btn__solid .btn {
   color: white;
 }
 
@@ -114,12 +114,10 @@
   color: var(--color-shared-12);
   background-color: var(--color-shared-5);
   border-color: var(--color-shared-7);
-  box-shadow: 0 3px 6px -2px var(--color-shared-1);
 }
 
 .btn__soft:hover {
-  background-color: var(--color-shared-6);
-  color: currentcolor;
+  background-color: var(--color-shared-7);
 }
 
 .btn__text {

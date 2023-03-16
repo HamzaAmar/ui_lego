@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { forwardRef } from 'react';
 
 import { classnames } from '../../../utils/classnames';
@@ -22,6 +23,7 @@ export const Button = forwardRef((props, ref) => {
     state = 'idle',
     icon,
     iconPosition = 'start',
+    className,
     ...rest
   } = props;
 
@@ -29,14 +31,11 @@ export const Button = forwardRef((props, ref) => {
   const isEndIcon = icon && iconPosition === 'end';
   const isLoading = state === 'loading';
 
-  const className = classnames(
-    `btn
-     btn__${size}
-     btn__${variant}
-     u_${color}
-     u_corner__${corner}`,
+  const _className = classnames(
+    `btn btn__${size} btn__${variant} u_${color} u_corner__${corner}`,
     {
       ['btn__loading']: isLoading,
+      [className!]: !!className,
     },
   );
 
@@ -44,7 +43,7 @@ export const Button = forwardRef((props, ref) => {
 
   return (
     <button
-      className={className}
+      className={_className}
       type="button"
       {...rest}
       {...disabledProps}
